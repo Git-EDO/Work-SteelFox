@@ -106,3 +106,39 @@ q5Btn.addEventListener('click', function(e) {
   body.classList.add('lock');
   thanksPopup.classList.add('open');
 });
+
+// Управление скроллом страницы
+
+let oilScroll = document.getElementById('oil');
+let workScroll = document.getElementById('work');
+let priceScroll = document.getElementById('price');
+let faqScroll = document.getElementById('faq');
+
+oilScroll.addEventListener ('click', function(e) {
+  e.preventDefault();
+  body.classList.remove('lock');
+  menu.classList.remove('active');
+  const catalogue = document.querySelector('.catalogue');
+  catalogue.scrollIntoView({block: "start", behavior: "smooth"});
+});
+workScroll.addEventListener ('click', function(e) {
+  e.preventDefault();
+  body.classList.remove('lock');
+  menu.classList.remove('active');
+  const standards = document.querySelector('.standards');
+  standards.scrollIntoView({block: "start", behavior: "smooth"});
+});
+priceScroll.addEventListener ('click', function(e) {
+  e.preventDefault();
+  body.classList.remove('lock');
+  menu.classList.remove('active');
+  const quality = document.querySelector('.quality');
+  quality.scrollIntoView({block: "start", behavior: "smooth"});
+});
+faqScroll.addEventListener ('click', function(e) {
+  e.preventDefault();
+  body.classList.remove('lock');
+  menu.classList.remove('active');
+  const faq = document.querySelector('.faq');
+  faq.scrollIntoView({block: "start", behavior: "smooth"});
+});
