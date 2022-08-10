@@ -514,7 +514,7 @@ h1 {
 .standard-button:not(:first-child) {
   margin-top: 15px;
 }
-.standard-button:hover {
+.standard-button.active {
   background-color: var(--accent-color);
   color: var(--dark-color);
   border: 1px solid var(--accent-color);
@@ -1196,7 +1196,6 @@ h1 {
 .popup-text p {
   margin-top: 20px;
 }
-
 .form-popup-body {
 }
 .form-popup-body .feedback-main-title {
@@ -1209,6 +1208,11 @@ h1 {
   width: 60%;
   padding-top: 75px;
   padding-bottom: 50px;
+}
+.thanks-popup .popup-cta .close-popup-icon:before,
+.thanks-popup .popup-cta .close-popup-icon:after {
+  height: 0;
+  width: 0;
 }
 
 @media (max-width: 1200px) {

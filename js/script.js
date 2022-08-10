@@ -17,13 +17,13 @@ let standardLogos = document.querySelectorAll('.standard-logo');
 let standardDescriptions = document.querySelectorAll('.standard-description');
 
 buttons.forEach(function(e,i) {
-  e.addEventListener('mouseover', function(){
+  e.addEventListener('mouseover', function() {
+    standardLogos.forEach(n => n.classList.remove('active'));
+    standardDescriptions.forEach(n => n.classList.remove('active'));
+    buttons.forEach(n => n.classList.remove('active'));
+    buttons[i].classList.add('active');
     standardLogos[i].classList.add('active');
     standardDescriptions[i].classList.add('active');
-  });
-  e.addEventListener('mouseout', function(){
-    standardLogos[i].classList.remove('active');
-    standardDescriptions[i].classList.remove('active');
   });
 });
 
@@ -50,7 +50,6 @@ if(spoilersTitle.length>0) {
 
 // Popups
 
-
 let personalBtn = document.querySelector('.footer-personal a');
 let feedbackBtn = document.querySelector('.contacts-manager a')
 let personalPopup = document.querySelector('.personal-popup');
@@ -74,10 +73,21 @@ let closePopups = document.querySelectorAll('.close-popup-icon');
 for(i=0;i<closePopups.length;i++){
   closePopup = closePopups[i];
   closePopup.addEventListener('click', function(e) {
+    e.preventDefault();
     body.classList.remove('lock');
     e.target.closest('.popup').classList.remove('open');
   })
 };
+
+let cataPopups = document.querySelectorAll('.open-form-popup');
+
+for(i=0;i<cataPopups.length;i++){
+  cataPopup = cataPopups[i];
+  cataPopup.addEventListener('click', function(e){
+    e.preventDefault();
+    feedbackPopup.classList.add('open');
+  })
+}
 
 // QUIZ 
 
@@ -89,6 +99,15 @@ let q4Btn = document.getElementById('q4-btn');
 let q5Btn = document.querySelector('.q5-btn');
 let thanksPopup = document.querySelector('.thanks-popup')
 
+const q3City = document.getElementById('q3-city');
+const q3Index = document.getElementById('q3-index');
+const q3Choose = document.querySelector('.q3-choose');
+
+const q5Name = document.getElementById('q5-name');
+const q5Email = document.getElementById('q5-email');
+const q5Tel = document.getElementById('q5-tel');
+const q5Choose = document.querySelector('.q5-choose');
+
 q1Btn.addEventListener('click', function(){
   quiz.style.transform = 'translateX(-100%)';
 });
@@ -96,15 +115,23 @@ q2Btn.addEventListener('click', function(){
   quiz.style.transform = 'translateX(-200%)';
 });
 q3Btn.addEventListener('click', function(){
-  quiz.style.transform = 'translateX(-300%)';
+  if(q3City.value === "" || q3Index.value === ""){
+    q3Choose.style.color = '#FF2B0D';
+  } else {
+    quiz.style.transform = 'translateX(-300%)';
+  }
 });
 q4Btn.addEventListener('click', function(){
   quiz.style.transform = 'translateX(-400%)';
 });
 q5Btn.addEventListener('click', function(e) {
-  e.preventDefault();
-  body.classList.add('lock');
-  thanksPopup.classList.add('open');
+  if(q5Name.value === "" || q5Email.value === "" || q5Tel.value === ""){
+    q5Choose.style.color = '#FF2B0D';
+  } else {
+    e.preventDefault();
+    body.classList.add('lock');
+    thanksPopup.classList.add('open');
+  }
 });
 
 // Управление скроллом страницы
@@ -113,6 +140,7 @@ let oilScroll = document.getElementById('oil');
 let workScroll = document.getElementById('work');
 let priceScroll = document.getElementById('price');
 let faqScroll = document.getElementById('faq');
+let quizScroll = document.getElementById('quiz');
 
 oilScroll.addEventListener ('click', function(e) {
   e.preventDefault();
@@ -145,4 +173,9 @@ faqScroll.addEventListener ('click', function(e) {
   burger.classList.remove('active');
   const faq = document.querySelector('.faq');
   faq.scrollIntoView({block: "start", behavior: "smooth"});
+});
+quizScroll.addEventListener ('click', function(e) {
+  e.preventDefault();
+  const quizScrenn = document.querySelector('.quiz');
+  quizScrenn.scrollIntoView({block: "start", behavior: "smooth"});
 });
