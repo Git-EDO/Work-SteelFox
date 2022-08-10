@@ -1,8 +1,8 @@
 <?php
-    $oil = $_POST['oil'];
     $name = $_POST['name'];
     $email = $_POST['email'];
 	$phone = $_POST['tel'];
+    $text = $_POST['question'];
 
 	$to = "test@gmail.com"; 
 	$date = date ("d.m.Y"); 
@@ -12,10 +12,10 @@
 
 	
 	$msg="
-    Масло: $oil /n
     Имя: $name /n
     E-mail: $email /n
-    Телефон: $phone /n 	
+    Телефон: $phone /n
+    Сообщение: $text"; 	
 	mail($to, $subject, $msg, "From: $to ");
 
 ?>
