@@ -227,6 +227,26 @@ h1 {
   line-height: 110%;
   color: var(--accent-color);
 }
+button {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 110%;
+  color: var(--accent-color);
+  background-color: transparent;
+  border: none;
+  position: relative;
+  padding-right: 5px;
+  cursor: pointer;
+}
+button img {
+  position: absolute;
+  right: -15px;
+  bottom: 1px;
+}
+.status {
+  margin-top: 10px;
+  text-align: right;
+}
 .main-cta {
   margin-left: 10px;
 }
@@ -1033,8 +1053,6 @@ h1 {
   display: flex;
   flex-direction: column;
 }
-.text-input {
-}
 .text-input input {
   border: none;
   outline: none;
@@ -1047,6 +1065,12 @@ h1 {
 }
 .text-input {
   margin-top: 40px;
+}
+form input.error{
+  border-bottom: 1px solid #FF2B0D;
+}
+label.error {
+  display: none !important;
 }
 .form-cta {
   margin-right: 15px;

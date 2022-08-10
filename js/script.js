@@ -80,14 +80,19 @@ for(i=0;i<closePopups.length;i++){
 };
 
 let cataPopups = document.querySelectorAll('.open-form-popup');
+let oilId = document.querySelector('.form-oil');
 
 for(i=0;i<cataPopups.length;i++){
   cataPopup = cataPopups[i];
   cataPopup.addEventListener('click', function(e){
     e.preventDefault();
+    let btnId = e.target.id;
+    console.log(btnId);
+    oilId.value = btnId;
     feedbackPopup.classList.add('open');
-  })
-}
+    body.classList.add('lock');
+  });
+};
 
 // QUIZ 
 
@@ -178,4 +183,36 @@ quizScroll.addEventListener ('click', function(e) {
   e.preventDefault();
   const quizScrenn = document.querySelector('.quiz');
   quizScrenn.scrollIntoView({block: "start", behavior: "smooth"});
+});
+
+
+// Mailer
+
+jQuery(document).ready(function () {
+
+ jQuery('.send-form').click( function() {
+   var form = jQuery(this).closest('form');
+   
+   if (form.valid() ) {
+     form.css('opacity','.5');
+     var actUrl = form.attr('action');
+
+     jQuery.ajax({
+       url: actUrl,
+       type: 'post',
+       dataType: 'html',
+       data: form.serialize(),
+       success: function(data) {
+         form.html(data);
+         form.css('opacity','1');
+                 form.find('.status').html('Форма отправлена успешно');
+       },
+       error:	 function() {
+            form.find('.status').html('Ошибка');
+       }
+     });
+   }
+ });
+
+
 });

@@ -133,7 +133,7 @@
                     Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития. Разнообразный и богатый опыт укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. 
                   </div>
                   <div class="back-link btn">
-                    <a href="#" class="open-form-popup">
+                    <a href="#" class="open-form-popup" id="fox-steel-10w-40">
                       Подробнее
                       <img src="./img/icons/arrow-down-right-black.svg" alt="">
                     </a>
@@ -157,7 +157,7 @@
                     Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития. Разнообразный и богатый опыт укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. 
                   </div>
                   <div class="back-link btn">
-                    <a href="#" class="open-form-popup">
+                    <a href="#" class="open-form-popup" id="fox-steel-20w-50">
                       Подробнее
                       <img src="./img/icons/arrow-down-right-black.svg" alt="">
                     </a>
@@ -181,7 +181,7 @@
                     Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития. Разнообразный и богатый опыт укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. 
                   </div>
                   <div class="back-link btn">
-                    <a href="#" class="open-form-popup">
+                    <a href="#" class="open-form-popup" id="fox-steel-30w-60">
                       Подробнее
                       <img src="./img/icons/arrow-down-right-black.svg" alt="">
                     </a>
@@ -205,7 +205,7 @@
                     Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития. Разнообразный и богатый опыт укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. 
                   </div>
                   <div class="back-link btn">
-                    <a href="#" class="open-form-popup">
+                    <a href="#" class="open-form-popup" id="fox-steel-40w-70">
                       Подробнее
                       <img src="./img/icons/arrow-down-right-black.svg" alt="">
                     </a>
@@ -229,7 +229,7 @@
                     Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития. Разнообразный и богатый опыт укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. 
                   </div>
                   <div class="back-link btn">
-                    <a href="#" class="open-form-popup">
+                    <a href="#" class="open-form-popup" id="fox-steel-50w-80">
                       Подробнее
                       <img src="./img/icons/arrow-down-right-black.svg" alt="">
                     </a>
@@ -253,7 +253,7 @@
                     Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития. Разнообразный и богатый опыт укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. 
                   </div>
                   <div class="back-link btn">
-                    <a href="#" class="open-form-popup">
+                    <a href="#" class="open-form-popup" id="fox-steel-60w-90">
                       Подробнее
                       <img src="./img/icons/arrow-down-right-black.svg" alt="">
                     </a>
@@ -822,26 +822,25 @@
                 <div class="feedback-subtitle">
                   Заполните данные и наши менеджеры свяжутся с Вами, чтобы помочь Вам решить вашу проблему
                 </div>
-                <div class="form">
+                <form action="sender.php" method="post" class="form">
                   <div class="text-input">
-                    <input type="text" placeholder="Полное имя">
-                  </div>
-                  <div class="text-input">
-                    <input type="email" placeholder="E-mail">
+                    <input type="text" class="form-name" name="name" placeholder="Полное имя*" required>
                   </div>
                   <div class="text-input">
-                    <input type="email" placeholder="Телефон">
+                    <input type="email" class="form-email" name="email" placeholder="E-mail*" required>
                   </div>
                   <div class="text-input">
-                    <input type="email" placeholder="Ваш вопрос">
+                    <input type="tel" class="form-tel" name="tel" placeholder="Телефон*" required>
                   </div>
-                  <div class="form-cta btn">
-                    <a href="#">
-                      Отправить
-                      <img src="./img/icons/arrow-down-right.svg" alt="">
-                    </a>
+                  <div class="text-input">
+                    <input type="text" class="form-question" name="question" placeholder="Ваш вопрос">
                   </div>
-                </div>
+                  <button type="button" class="send-form form-cta btn">
+                    Отправить
+                    <img src="./img/icons/arrow-down-right.svg" alt="icon">
+                  </button>
+                  <div class="status"></div>
+                </form>
               </div>
             </div>
           </div>
@@ -893,23 +892,25 @@
                 <div class="feedback-subtitle">
                   Заполните данные и наши менеджеры свяжутся с Вами, чтобы помочь Вам решить вашу проблему
                 </div>
-                <div class="form">
+                <form action="sender.php" method="post" class="popup-form form">
                   <div class="text-input">
-                    <input type="text" placeholder="Полное имя">
-                  </div>
-                  <div class="text-input">
-                    <input type="email" placeholder="E-mail">
+                    <input type="text" class="form-oil" name="oil" placeholder="Наименование масла" disabled>
                   </div>
                   <div class="text-input">
-                    <input type="email" placeholder="Телефон">
+                    <input type="text" class="form-name" name="name" placeholder="Полное имя*" required>
                   </div>
-                  <div class="form-cta btn">
-                    <a href="#">
-                      Отправить
-                      <img src="./img/icons/arrow-down-right.svg" alt="">
-                    </a>
+                  <div class="text-input">
+                    <input type="email" class="form-email" name="email" placeholder="E-mail*" required>
                   </div>
-                </div>
+                  <div class="text-input">
+                    <input type="tel" class="form-tel" name="tel" placeholder="Телефон*" required>
+                  </div>
+                  <button type="button" class="send-form form-cta btn">
+                    Отправить
+                    <img src="./img/icons/arrow-down-right.svg" alt="icon">
+                  </button>
+                  <div class="status"></div>
+                </form>
               </div>
             </div>
           </div>
@@ -955,8 +956,9 @@
       </div>
     </footer>
   </div>
-  
+
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="./js/jquery.validate.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
   <script src="./js/script.js"></script>
 </body>
