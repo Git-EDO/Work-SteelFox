@@ -503,23 +503,23 @@
                   </div>
                   <div class="radio-buttons">
                     <div class="radio-button">
-                      <input checked type="radio" class="variance q1-variance" name="q1" id="q1_1">
+                      <input checked type="radio" class="variance q1-variance" name="q1" id="q1_1" value="q1_1">
                       <label for="q1_1">СТО</label>
                     </div>
                     <div class="radio-button">
-                      <input type="radio" class="variance q1-variance" name="q1" id="q1_2">
+                      <input type="radio" class="variance q1-variance" name="q1" id="q1_2" value="q1_2">
                       <label for="q1_2">Торговая компания</label>
                     </div>
                     <div class="radio-button">
-                      <input type="radio" class="variance q1-variance" name="q1" id="q1_3">
+                      <input type="radio" class="variance q1-variance" name="q1" id="q1_3" value="q1_3">
                       <label for="q1_3">Свой автопарк</label>
                     </div>
                     <div class="radio-button">
-                      <input type="radio" class="variance q1-variance" name="q1" id="q1_4">
+                      <input type="radio" class="variance q1-variance" name="q1" id="q1_4" value="q1_4">
                       <label for="q1_4">Магазин</label>
                     </div>
                     <div class="radio-button">
-                      <input type="radio" class="variance q1-variance" name="q1" id="q1_5">
+                      <input type="radio" class="variance q1-variance" name="q1" id="q1_5" value="q1_5">
                       <label for="q1_5">Индустрия</label>
                     </div>
                   </div>
@@ -722,6 +722,10 @@
                       <input id="q5-tel" type="tel" placeholder="Телефон">
                     </div>
                   </div>
+                  <div class="radio-button q5-radio-button">
+                    <input type="radio" class="variance personal-data" name="personal-data-popup" id="personal-data-popup" value="yes" required>
+                    <label for="personal-data-popup">Используя эту форму, вы соглашаетесь с хранением и обработкой данных на данном сайте</label>
+                  </div>
                 </div>
               </div>
             </div>
@@ -821,7 +825,7 @@
                 <div class="feedback-subtitle">
                   Заполните данные и наши менеджеры свяжутся с Вами, чтобы помочь Вам решить вашу проблему
                 </div>
-                <form action="main-sender.php" method="post" class="form">
+                <form action="main-sender.php" method="post" class="form footer-form">
                   <div class="text-input">
                     <input type="text" class="form-name" name="name" placeholder="Полное имя*" required>
                   </div>
@@ -833,6 +837,10 @@
                   </div>
                   <div class="text-input">
                     <input type="text" class="form-question" name="question" placeholder="Ваш вопрос">
+                  </div>
+                  <div class="radio-button">
+                    <input type="radio" class="variance personal-data" name="personal-data-footer" id="personal-data-footer" value="yes" required>
+                    <label for="personal-data-footer">Используя эту форму, вы соглашаетесь с хранением и обработкой данных на данном сайте</label>
                   </div>
                   <button type="button" class="send-form form-cta btn">
                     Отправить
@@ -903,6 +911,10 @@
                   </div>
                   <div class="text-input">
                     <input type="tel" class="form-tel" name="tel" placeholder="Телефон*" required>
+                  </div>
+                  <div class="radio-button">
+                    <input type="radio" class="variance personal-data" name="personal-data-popup" id="personal-data-popup" value="yes" required>
+                    <label for="personal-data-popup">Используя эту форму, вы соглашаетесь с хранением и обработкой данных на данном сайте</label>
                   </div>
                   <button type="button" class="send-form form-cta btn">
                     Отправить

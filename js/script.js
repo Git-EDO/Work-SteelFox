@@ -87,7 +87,6 @@ for(i=0;i<cataPopups.length;i++){
   cataPopup.addEventListener('click', function(e){
     e.preventDefault();
     let btnId = e.target.id;
-    console.log(btnId);
     oilId.value = btnId;
     feedbackPopup.classList.add('open');
     body.classList.add('lock');
@@ -112,6 +111,7 @@ const q5Name = document.getElementById('q5-name');
 const q5Email = document.getElementById('q5-email');
 const q5Tel = document.getElementById('q5-tel');
 const q5Choose = document.querySelector('.q5-choose');
+const q5Radio = document.getElementById('personal-data-popup');
 
 q1Btn.addEventListener('click', function(){
   quiz.style.transform = 'translateX(-100%)';
@@ -130,7 +130,7 @@ q4Btn.addEventListener('click', function(){
   quiz.style.transform = 'translateX(-400%)';
 });
 q5Btn.addEventListener('click', function(e) {
-  if(q5Name.value === "" || q5Email.value === "" || q5Tel.value === ""){
+  if(q5Name.value === "" || q5Email.value === "" || q5Tel.value === "" || !q5Radio.checked){
     q5Choose.style.color = '#FF2B0D';
   } else {
     e.preventDefault();
@@ -138,6 +138,13 @@ q5Btn.addEventListener('click', function(e) {
     thanksPopup.classList.add('open');
   }
 });
+
+// const q1Variances = document.querySelectorAll('input[name="q1"]')
+// for (const f of q1Variances) {
+//   if (f.checked) {
+//     // console.log(f.value)
+//   };
+// };
 
 // Управление скроллом страницы
 
