@@ -758,7 +758,6 @@ button img {
   padding: 25px 20px;
   border-radius: 10px;
   border: 1px solid #828282;
-  cursor: pointer;
   width: 380px;
   transition: 0.5s ease;
 }
