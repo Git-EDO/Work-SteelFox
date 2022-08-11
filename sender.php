@@ -1,10 +1,10 @@
 <?php
-    $oil = $_POST['oil'];
     $name = $_POST['name'];
-    $email = $_POST['email'];
 	$phone = $_POST['tel'];
+    $email = $_POST['email'];
+    $text = $_POST['question'];
 
-	$to = "test@gmail.com"; 
+	$to = "demonex@bk.ru"; 
 	$date = date ("d.m.Y"); 
 	$time = date ("h:i");
 	$from = $email;
@@ -12,10 +12,12 @@
 
 	
 	$msg="
-    Масло: $oil /n
     Имя: $name /n
-    E-mail: $email /n
-    Телефон: $phone /n 	
-	mail($to, $subject, $msg, "From: $to ");
+    Телефон: $phone /n
+    Почта: $email /n
+    Текст: $text "; 	
+	mail($to, $subject, $msg, "From: $from ");
 
 ?>
+
+<p class="form-notification">Форма успешно отправлена.</p>

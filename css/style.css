@@ -798,6 +798,7 @@ button img {
 }
 .quiz-wrapper {
   display: flex;
+  flex-direction: row;
   width: 100%;
   transition: 0.5s ease;
 }
@@ -1052,6 +1053,10 @@ button img {
   display: flex;
   flex-direction: column;
 }
+.quiz-form {
+  display: flex;
+  flex-direction: row;
+}
 .text-input input {
   border: none;
   outline: none;
@@ -1086,6 +1091,10 @@ label.error {
   min-width: 40px;
   flex: 1 1 100%;
   margin-top: 20px;
+}
+.form-notification {
+  margin-top: 20px;
+  color: var(--accent-color);
 }
 .footer-form .radio-button label {
   flex: 0 0 80%;

@@ -134,8 +134,7 @@ q5Btn.addEventListener('click', function(e) {
     q5Choose.style.color = '#FF2B0D';
   } else {
     e.preventDefault();
-    body.classList.add('lock');
-    thanksPopup.classList.add('open');
+    quiz.style.transform = 'translateX(0)';
   }
 });
 
@@ -196,11 +195,11 @@ quizScroll.addEventListener ('click', function(e) {
 // Mailer
 
 jQuery(document).ready(function () {
-
+     
  jQuery('.send-form').click( function() {
    var form = jQuery(this).closest('form');
    
-   if (form.valid() ) {
+   if ( form.valid() ) {
      form.css('opacity','.5');
      var actUrl = form.attr('action');
 
@@ -212,10 +211,11 @@ jQuery(document).ready(function () {
        success: function(data) {
          form.html(data);
          form.css('opacity','1');
-                 form.find('.status').html('Форма отправлена успешно');
+                 //form.find('.status').html('форма отправлена успешно');
+                 $('.thanks-popup').addClass('open')
        },
        error:	 function() {
-            form.find('.status').html('Ошибка');
+            form.find('.status').html('серверная ошибка');
        }
      });
    }

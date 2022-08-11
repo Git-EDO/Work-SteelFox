@@ -468,7 +468,7 @@
               Квиз-опрос
             </div>
             <div class="quiz-body">
-              <div class="quiz-wrapper">
+              <form class="quiz-wrapper form quiz-form" action="quiz-sender.php" method="post">
                 <div class="quiz-item">
                   <div class="quiz-progress">
                     <div class="progress-element active">
@@ -613,10 +613,10 @@
                   </div>
                   <div class="quiz-inputs q3-quiz-inputs">
                     <div class="text-input">
-                      <input id="q3-city" type="text" placeholder="Город">
+                      <input id="q3-city" type="text" name="q3-city" placeholder="Город">
                     </div>
                     <div class="text-input">
-                      <input id="q3-index" type="text" placeholder="Почтовый индекс">
+                      <input id="q3-index" type="text" name="q3-index" placeholder="Почтовый индекс">
                     </div>
                   </div>
                 </div>
@@ -702,10 +702,10 @@
                       <div class="quiz-question">
                         Оставьте контактные данные
                       </div>
-                      <div class="quiz-button q5-btn">
-                        Далее
+                      <button type="button" class="send-form quiz-button q5-btn">
+                        Отправить
                         <img src="./img/icons/arrow-down-right-black.svg" alt="icon">
-                      </div>
+                      </button>
                     </div>
                   </div>
                   <div class="quiz-choose q5-choose">
@@ -713,13 +713,13 @@
                   </div>
                   <div class="quiz-inputs q5-quiz-inputs">
                     <div class="text-input">
-                      <input id="q5-name" type="text" placeholder="Полное имя">
+                      <input id="q5-name" type="text" name="q5-name" placeholder="Полное имя">
                     </div>
                     <div class="text-input">
-                      <input id="q5-email" type="email" placeholder="E-mail">
+                      <input id="q5-email" type="email" name="q5-email" placeholder="E-mail">
                     </div>
                     <div class="text-input">
-                      <input id="q5-tel" type="tel" placeholder="Телефон">
+                      <input id="q5-tel" type="tel" name="q5-tel" placeholder="Телефон">
                     </div>
                   </div>
                   <div class="radio-button q5-radio-button">
@@ -727,7 +727,7 @@
                     <label for="personal-data-popup">Используя эту форму, вы соглашаетесь с хранением и обработкой данных на данном сайте*</label>
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </section>
@@ -825,7 +825,7 @@
                 <div class="feedback-subtitle">
                   Заполните данные и наши менеджеры свяжутся с Вами, чтобы помочь Вам решить вашу проблему
                 </div>
-                <form action="main-sender.php" method="post" class="form footer-form">
+                <form action="sender.php" method="post" class="form footer-form">
                   <div class="text-input">
                     <input type="text" class="form-name" name="name" placeholder="Полное имя*" required>
                   </div>
@@ -899,9 +899,9 @@
                 <div class="feedback-subtitle">
                   Заполните данные и наши менеджеры свяжутся с Вами, чтобы помочь Вам решить вашу проблему
                 </div>
-                <form action="sender.php" method="post" class="popup-form form">
+                <form action="main-sender.php" method="post" class="popup-form form">
                   <div class="text-input">
-                    <input type="text" class="form-oil" name="oil" placeholder="Наименование масла" disabled>
+                    <input type="text" class="form-oil" name="oil-name" placeholder="Наименование масла">
                   </div>
                   <div class="text-input">
                     <input type="text" class="form-name" name="name" placeholder="Полное имя*" required>
