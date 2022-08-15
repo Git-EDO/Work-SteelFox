@@ -392,7 +392,6 @@ button img {
   top: 0;
   right: 0;
   object-fit: cover;
-  /* object-position: -200px; */
 }
 .catalogue .bg-cover {
   width: 100%;
@@ -1562,6 +1561,9 @@ label.error {
   .progress-element {
     padding: 15px 10px;
     font-size: 14px;
+  }
+  .catalogue .bg-image img {
+    object-position: left;
   }
 }
 @media (max-width: 767px) {
