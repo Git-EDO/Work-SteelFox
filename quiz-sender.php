@@ -8,7 +8,7 @@
 			$email = $_POST['q5-email'];
 			$phone = $_POST['q5-tel'];
 
-			$to = "demonex@bk.ru"; 
+			$to = "retail@magnatoil.com, 010914@list.ru"; 
 			$date = date ("d.m.Y"); 
 			$time = date ("h:i");
 			$from = $email;
