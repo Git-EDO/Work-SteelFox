@@ -285,9 +285,6 @@ button img {
   object-fit: cover;
   object-position: top;
 }
-.main-page .bg-image img {
-  object-fit: cover;
-}
 .bg-cover {
   position: absolute;
   width: 100vw;
@@ -1297,6 +1294,10 @@ label.error {
   width: 0;
 }
 @media (max-width: 1440px) {
+  .main-page .bg-image img {
+    object-position: center 150px;
+    transform: scale(1.6);
+  }
 }
 @media (max-width: 1200px) {
   .container {
