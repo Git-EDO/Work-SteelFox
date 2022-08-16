@@ -137,21 +137,15 @@ q3Btn.addEventListener('click', function(){
 q4Btn.addEventListener('click', function(){
   quiz.style.transform = 'translateX(-400%)';
 });
-q5Btn.addEventListener('click', function(e) {
-  if(q5Name.value === "" || q5Email.value === "" || q5Tel.value === "" || !q5Radio.checked){
-    q5Choose.style.color = '#FF2B0D';
-  } else {
-    e.preventDefault();
-    quiz.style.transform = 'translateX(0)';
-  }
-});
-
-// const q1Variances = document.querySelectorAll('input[name="q1"]')
-// for (const f of q1Variances) {
-//   if (f.checked) {
-//     // console.log(f.value)
-//   };
-// };
+// q5Btn.addEventListener('click', function(e) {
+//   if(q5Name.value === "" || q5Email.value === "" || q5Tel.value === "" || !q5Radio.checked){
+//     q5Choose.style.color = '#FF2B0D';
+//   } else {
+//     e.preventDefault();
+//     q5Choose.style.color = '#fff';
+//     quiz.style.transform = 'translateX(0)';
+//   }
+// });
 
 // Управление скроллом страницы
 
@@ -220,7 +214,8 @@ jQuery(document).ready(function () {
          form.html(data);
          form.css('opacity','1');
                  //form.find('.status').html('форма отправлена успешно');
-                 $('.thanks-popup').addClass('open')
+                 $('.thanks-popup').addClass('open');
+                 $('.quiz-wrapper').attr('style', 'transform: translateX(0);');
        },
        error:	 function() {
             form.find('.status').html('серверная ошибка');

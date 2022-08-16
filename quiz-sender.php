@@ -8,10 +8,10 @@
 			$email = $_POST['q5-email'];
 			$phone = $_POST['q5-tel'];
 
-			$to = "retail@magnatoil.com"; 
+			$to = "demonex@bk.ru"; 
 			$date = date ("d.m.Y"); 
 			$time = date ("h:i");
-			$from = $email;
+			$from = "info@steel-fox.ru";
 			$subject = "Заявка c сайта";
 
 	

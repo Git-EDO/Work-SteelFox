@@ -4,10 +4,10 @@
     $email = $_POST['email'];
     $text = $_POST['question'];
 
-	$to = "retail@magnatoil.com";
+	$to = "010914@list.ru, retail@magnatoil.com";
 	$date = date ("d.m.Y");
 	$time = date ("h:i");
-	$from = $email;
+	$from = "info@steel-fox.ru";
 	$subject = "Заявка c сайта";
 
 	
