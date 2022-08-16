@@ -4,11 +4,16 @@
 			$city = $_POST['q3-city'];
 			$index = $_POST['q3-index'];
 			$brand = $_POST['q4'];
+			$N = count($brand);
+			for($i=0; $i < $N; $i++) {
+				echo($brand[$i] . " ");
+			};
+
 			$name = $_POST['q5-name'];
 			$email = $_POST['q5-email'];
 			$phone = $_POST['q5-tel'];
 
-			$to = "demonex@bk.ru"; 
+			$to = "dex.swat@gmail.com";
 			$date = date ("d.m.Y"); 
 			$time = date ("h:i");
 			$from = "info@steel-fox.ru";
@@ -20,7 +25,7 @@
 			Объём: $volume /n
 			Город: $city /n
 			Индекс: $index /n
-			Бренд: $brand /n
+			Бренд: Выбрано $N брендов: $brands /n
 			Имя: $name /n
 			Email: $email /n
 			Телефон: $phone "; 	
