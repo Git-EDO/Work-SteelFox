@@ -1295,7 +1295,7 @@ label.error {
 }
 @media (max-width: 1440px) {
   .main-page .bg-image img {
-    object-position: center 150px;
+    object-position: center 100px;
     transform: scale(1.6);
   }
 }
