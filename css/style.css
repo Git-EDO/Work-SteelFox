@@ -49,8 +49,8 @@ body.lock {
   padding-top: 50px;
 }
 .nav-logo {
-  width: 100px;
-  height: 70px;
+  width: 270px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -393,6 +393,7 @@ button img {
   top: 0;
   right: 0;
   object-fit: cover;
+  object-position: left;
 }
 .catalogue .bg-cover {
   width: 100%;
@@ -1285,6 +1286,8 @@ label.error {
   height: 0;
   width: 0;
 }
+@media (max-width: 1440px) {
+}
 @media (max-width: 1200px) {
   .container {
     max-width: 1170px;
@@ -1462,6 +1465,10 @@ label.error {
   }
 }
 @media (max-width: 768px) {
+  .nav-logo {
+    width: 200px;
+    height: 100px;
+  }
   .container {
     max-width: 750px;
   }
@@ -1730,6 +1737,10 @@ label.error {
   }
 }
 @media (max-width: 425px) {
+  .nav-logo {
+    width: 150px;
+    height: 80px;
+  }
   .nav-menu-list li {
     font-size: 28px;
   }
@@ -1781,6 +1792,10 @@ label.error {
   }
 }
 @media (max-width: 320px) {
+  .nav-logo {
+    width: 120px;
+    height: 60px;
+  }
   .contacts-manager {
     font-size: 10px;
     line-height: 121%;
