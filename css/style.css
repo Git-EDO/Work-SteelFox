@@ -380,6 +380,7 @@ button img {
   width: 100%;
   height: 100%;
   z-index: -2;
+  position: fixed;
 }
 .catalogue .bg-image {
   width: 100%;
@@ -389,7 +390,7 @@ button img {
 .catalogue .bg-image img {
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   object-fit: cover;
