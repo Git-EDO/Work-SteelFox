@@ -49,12 +49,20 @@ if(spoilersTitle.length>0) {
 }
 
 // Popups
-
+let openPersonals = document.querySelectorAll('.open-personal');
 let personalBtn = document.querySelector('.footer-personal a');
 let feedbackBtn = document.querySelector('.contacts-manager a')
 let personalPopup = document.querySelector('.personal-popup');
 let feedbackPopup = document.querySelector('.form-popup');
 let popups = document.querySelectorAll('.popup');
+
+for(i=0; i< openPersonals.length; i++) {
+  openPersonal = openPersonals[i];
+  openPersonal.addEventListener('click', function(){
+    body.classList.add('lock');
+    personalPopup.classList.add('open');
+  })
+}
 
 personalBtn.addEventListener('click', function(e) {
   e.preventDefault();
