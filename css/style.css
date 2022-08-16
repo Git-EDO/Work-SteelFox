@@ -1474,6 +1474,10 @@ label.error {
   .quiz-question {
     font-size: 28px;
   }
+  .main-page .bg-image img {
+    object-position: top top;
+    transform: scale(1.4);
+  }
 }
 @media (max-width: 768px) {
   .nav-logo {
