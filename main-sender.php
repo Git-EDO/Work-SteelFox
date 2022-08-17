@@ -4,7 +4,7 @@
 	$phone = $_POST['tel'];
     $email = $_POST['email'];
 
-	$to = "demonex@bk.ru"; 
+	$to = "010914@list.ru, retail@magnatoil.com"; 
 	$date = date ("d.m.Y"); 
 	$time = date ("h:i");
 	$from = "info@steel-fox.ru";
@@ -12,9 +12,9 @@
 
 	
 	$msg="
-    Имя: $name /n
-    Телефон: $phone /n
-    Почта: $email /n
+    Имя: $name \n
+    Телефон: $phone \n
+    Почта: $email \n
     Масло: $oil "; 	
 	mail($to, $subject, $msg, "From: $from ");
 
